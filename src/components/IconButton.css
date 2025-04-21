@@ -1,0 +1,53 @@
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--semantic-background-neutral-senary);
+  color: var(--semantic-text-neutral-white-fixed);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Default icon color */
+.icon-button i {
+  font-size: 1.125rem;
+}
+
+/* Hover State */
+.icon-button:hover {
+  background-color: var(--semantic-background-neutral-septenary);
+}
+
+/* Pressed State */
+.icon-button:active {
+  background-color: var(--semantic-background-neutral-senary);
+  transform: scale(0.95);
+}
+
+.icon-button.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--semantic-background-neutral-quaternary);
+  color: var(--semantic-text-neutral-quaternary);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;   
+}
+
+.icon-button.secondary i {
+  font-size: 1.125rem;
+}
+
+/* Hover State */
+.icon-button.secondary:hover {
+  background-color: var(--semantic-background-neutral-senary);
+  color: var(--semantic-text-neutral-white-fixed);
+}

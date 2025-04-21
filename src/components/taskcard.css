@@ -1,0 +1,86 @@
+/* src/components/TaskCard.css */
+
+/* Main container */
+.task-card {
+    background: var(--semantic-background-neutral-primary);
+    border: 1px solid var(--semantic-border-neutral-primary);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem 1rem 1rem;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03);
+    transition: box-shadow 0.1s ease;
+    position: relative; /* so the action buttons can be positioned */
+  }
+  
+  /* Hover effect for the entire card */
+  .task-card:hover {
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.1s ease;
+  }
+  
+  /* Header row */
+  .task-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Title and description */
+  .task-name {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-right:0.5rem;
+    color: var(--semantic-text-neutral-primary);
+  }
+  
+  .task-description {
+    margin: 0 0 8px 0;
+    font-size: 0.9rem;
+    color: var(--semantic-text-neutral-tertiary);
+    line-height: 1.4;
+  }
+
+  /* Tag pill */
+  .task-tag {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    margin-top: 4px;
+    font-weight:600;
+  }
+  
+  /* Priority Icons */
+  .priority-icon {
+    font-size: 1.2rem;
+  }
+  
+  .priority-icon.high {
+    color: var(--semantic-text-yellow-primary);
+  }
+  
+  .priority-icon.low {
+    color: var(--semantic-text-blue-primary);
+  }
+ 
+  .task-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+/* Action Buttons Container (hidden by default, shown on hover) */
+.task-card-actions {
+  display: flex;
+  gap: 0.875rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  margin-top: 6px;
+}
+
+.task-card:hover .task-card-actions {
+  opacity: 1;
+}

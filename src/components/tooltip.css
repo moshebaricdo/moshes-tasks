@@ -1,0 +1,61 @@
+.tooltip-container {
+    position: relative; /* So the tooltip can be positioned absolutely within this container */
+    display: inline-block; /* Or flex, if you prefer */
+    z-index: 1000;
+  }
+  
+  .tooltip-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--semantic-background-neutral-primary-inverse); 
+    color: var(--semantic-text-neutral-primary-inverse); 
+    padding: 8px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    pointer-events: none; /* Prevent blocking cursor events */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.2s ease-in-out;
+    
+    /* Box shadow for a pop-out effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 1001;
+  }
+  
+  /* Right position (default) */
+  .tooltip-container.right .tooltip-text {
+    left: calc(100% + 1rem);
+  }
+  
+  .tooltip-container.right .tooltip-text::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-right-color: var(--semantic-background-neutral-primary-inverse); 
+    z-index: 1001;
+  }
+  
+  /* Left position */
+  .tooltip-container.left .tooltip-text {
+    right: calc(100% + 1.65rem); /* Added 8px to the existing gap */
+  }
+  
+  .tooltip-container.left .tooltip-text::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-left-color: var(--semantic-background-neutral-primary-inverse);
+    z-index: 1001;
+  }
+  
+  /* Show the tooltip on hover */
+  .tooltip-container:hover .tooltip-text {
+    opacity: 1;
+  }

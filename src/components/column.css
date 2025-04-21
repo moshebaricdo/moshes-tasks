@@ -1,0 +1,227 @@
+/* src/components/column.css */
+
+.column {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  background-color: var(--semantic-background-neutral-tertiary);
+  border: 1px solid var(--semantic-border-neutral-strong);
+  border-radius: 0.5rem;
+  overflow: visible;
+}
+
+/* Header container */
+.column-header {
+  background-color: var(--semantic-background-neutral-primary);
+  border-bottom: 1px solid var(--semantic-border-neutral-strong);
+  padding: 0.75rem 1rem;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.column-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: visible;
+}
+
+.column-title {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--semantic-text-neutral-secondary);
+}
+
+/* Task count and resolve all button container */
+.column-actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  overflow: visible;
+}
+
+.column-task-count {
+  background-color: var(--semantic-background-neutral-tertiary);
+  border-radius: 50%;
+  font-weight: 600;
+  width: 1rem;
+  height: 1rem;
+  color: var(--semantic-text-neutral-tertiary);
+  font-size: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+/* Resolve all button */
+.resolve-all-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 4;
+  overflow: visible;
+}
+
+/* Show resolve all button on column header hover for resolved column */
+.column[data-status="resolved"] .column-header:hover .resolve-all-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.column[data-status="resolved"] .column-header:hover .column-task-count {
+  opacity: 0;
+}
+
+/* Success checkmark icon */
+.resolve-all-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--semantic-text-neutral-primary-inverse);
+}
+
+.column-content {
+  flex: 1;
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 1;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+}
+
+/* The scroll-inner container that handles scrolling */
+.scroll-inner {
+  overflow-y: auto;
+  padding: 10px;
+  max-height: 100%;
+  box-sizing: border-box;
+  /* Enable smooth scrolling */
+  scroll-behavior: smooth;
+  /* Hide default scrollbar in Firefox */
+  scrollbar-width: none;
+  /* Hide default scrollbar in IE/Edge */
+  -ms-overflow-style: none;
+}
+
+/* Hide default WebKit scrollbar */
+.scroll-inner::-webkit-scrollbar {
+  display: none;
+}
+
+/* Bottom gradient overlay */
+.column-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Custom scrollbar track - moved to different pseudo-element */
+.column-content > .scroll-track {
+  content: '';
+  position: absolute;
+  top: 10px; /* Match padding of scroll-inner */
+  right: 4px;
+  width: 6px;
+  height: calc(100% - 20px); /* Account for padding */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  background: transparent;
+  border-radius: 3px;
+}
+
+/* Show scrollbar track on column hover */
+.column-content:hover > .scroll-track {
+  opacity: 1;
+}
+
+/* Custom scrollbar thumb */
+.column-content::before {
+  content: '';
+  position: absolute;
+  right: 4px;
+  width: 6px;
+  border-radius: 3px;
+  background-color: var(--semantic-background-neutral-quaternary);
+  opacity: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  pointer-events: none;
+  /* Calculate and set scrollbar thumb height and position */
+  height: calc((100% - 20px) * var(--scrollbar-thumb-height, 0%));
+  top: calc(10px + ((100% - 20px) * var(--scrollbar-thumb-top, 0%)));
+  z-index: 2;
+}
+
+/* Show scrollbar thumb on hover */
+.column-content:hover::before {
+  opacity: 1;
+}
+
+/* Scrollbar thumb hover state */
+.column-content:hover::before:hover {
+  background-color: var(--semantic-background-neutral-quinary);
+}
+
+/* Empty state styling */
+.column-empty-state {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 65%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+
+.column-empty-state.fade-out {
+  opacity: 0;
+}
+
+.column-empty-state.fade-in {
+  opacity: 1;
+}
+
+.empty-state-icon {
+  font-size: 2rem;
+  color: var(--semantic-text-neutral-tertiary);
+  margin-bottom: 0.5rem;
+}
+
+.empty-state-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--semantic-text-neutral-tertiary);
+  line-height: 1.2;
+}
+
+.empty-state-subtitle {
+  font-size: 0.85rem;
+  color: var(--semantic-text-neutral-tertiary);
+  margin: 0;
+  line-height: 1.3;
+}

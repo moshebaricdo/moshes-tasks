@@ -1,0 +1,88 @@
+.tag-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .tag-dropdown-display {
+    background-color: var(--semantic-background-neutral-primary);
+    color: var(--semantic-text-neutral-quaternary);
+    border: 2px solid var(--semantic-border-neutral-strong);
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.75rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.15s ease-in, border 0.15s ease-in, color 0.15s ease-in;
+  }
+  
+  .tag-dropdown-display:hover,
+  .tag-dropdown-display:active {
+    background-color: var(--semantic-background-neutral-secondary);
+    color: var(--semantic-text-neutral-primary);
+    border: 2px solid var(--semantic-border-neutral-solid);
+  }
+  
+  .tag-placeholder {
+    color: var(--semantic-text-neutral-quaternary);
+    height:19px;
+    line-height: 1.2;
+  }
+  
+  .tag-display {
+    display: inline-flex;
+    align-items: center;
+    height:19px;
+    gap: 0.65rem;
+    color: var(--semantic-text-neutral-primary);
+  }
+  
+  .tag-color-circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+  }
+  
+  .tag-checkmark {
+    font-size: 14px;
+    color: var(--semantic-text-neutral-white-fixed);
+  }
+  
+  .tag-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 99%;
+    background-color: var(--semantic-background-neutral-primary);
+    border: 2px solid var(--semantic-border-neutral-primary);
+    border-radius: 4px;
+    margin-top: 4px;
+    z-index: 999;
+    overflow-y: auto;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tag-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.3rem 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.10s ease-in;
+  }
+  
+  .tag-dropdown-item:hover {
+    background-color: var(--semantic-background-neutral-secondary);
+  }
+
+  .tag-dropdown-item:active {
+    background-color: var(--semantic-background-neutral-tertiary);
+  }
+  
+  .tag-dropdown-item.selected {
+    /* Set the background to the option's color if needed. 
+       Alternatively, you could leave it neutral and just show the checkmark. */
+    color: var(--semantic-text-neutral-white-fixed);
+  }

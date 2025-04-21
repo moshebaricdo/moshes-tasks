@@ -1,0 +1,67 @@
+/* .modal-buttons */
+.action-button {
+    padding: 0.5rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+  }
+  
+  .action-button i {
+    font-size: 0.875rem;
+
+  }
+
+  .icon-action-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1px;
+  }
+
+  /* Primary (Create) Button */
+  .action-button[type="submit"] {
+    background-color: var(--semantic-background-green-primary);
+    color: var(--semantic-text-neutral-white-fixed);
+  }
+  
+  .action-button[type="submit"]:hover {
+    background-color: var(--semantic-background-green-strong);
+  }
+  
+  .action-button[type="submit"]:active {
+    background-color: var(--semantic-background-green-primary);
+  }
+  
+  /* Secondary (Cancel) Button */
+  .action-button[type="button"] {
+    background-color: var(--semantic-background-red-secondary);
+    color: var(--semantic-text-red-primary);
+  }
+  
+  .action-button[type="button"]:hover {
+    background-color: var(--semantic-background-red-primary);
+    color: var(--semantic-text-neutral-white-fixed);
+  }
+  
+  .action-button[type="button"]:active {
+    background-color: var(--semantic-background-red-secondary);
+    color: var(--semantic-text-red-primary);
+  }
+  
+  /* Disabled .modal-button State */
+  .action-button:disabled {
+    background-color: var(--semantic-background-neutral-quaternary);
+    color: var(--semantic-text-neutral-primary-inverse);
+    cursor: not-allowed;
+  }
+
+    /* Disabled .modal-button State */
+    .action-button:disabled:hover {
+      background-color: var(--semantic-background-neutral-quaternary);
+      color: var(--semantic-text-neutral-primary-inverse);
+      cursor: not-allowed;
+    }

@@ -1,0 +1,136 @@
+/* Light Mode Semantic Tokens */
+:root {
+ /* Backgrounds */
+    --semantic-background-neutral-primary-inverse: var(--primitive-base-black);
+    --semantic-background-neutral-primary: var(--primitive-base-white);
+    --semantic-background-neutral-quaternary: var(--primitive-gray-20);
+    --semantic-background-neutral-quinary: var(--primitive-gray-30);
+    --semantic-background-neutral-secondary: var(--primitive-gray-5);
+    --semantic-background-neutral-senary: var(--primitive-gray-40);
+    --semantic-background-neutral-septenary: var(--primitive-gray-50);
+    --semantic-background-neutral-tertiary: var(--primitive-gray-10);
+    --semantic-background-blue-primary: var(--primitive-blue-50);
+    --semantic-background-blue-secondary: var(--primitive-blue-10);
+    --semantic-background-blue-strong: var(--primitive-blue-70);
+    --semantic-background-green-primary: var(--primitive-green-50);
+    --semantic-background-green-secondary: var(--primitive-green-10);
+    --semantic-background-green-strong: var(--primitive-green-70);
+    --semantic-background-orange-primary: var(--primitive-orange-50);
+    --semantic-background-orange-secondary: var(--primitive-orange-10);
+    --semantic-background-orange-strong: var(--primitive-orange-70);
+    --semantic-background-purple-primary: var(--primitive-purple-50);
+    --semantic-background-purple-secondary: var(--primitive-purple-10);
+    --semantic-background-purple-strong: var(--primitive-purple-70);
+    --semantic-background-red-primary: var(--primitive-red-50);
+    --semantic-background-red-secondary: var(--primitive-red-10);
+    --semantic-background-red-strong: var(--primitive-red-70);
+    --semantic-background-yellow-primary: var(--primitive-yellow-50);
+    --semantic-background-yellow-secondary: var(--primitive-yellow-10);
+    --semantic-background-yellow-strong: var(--primitive-yellow-70);
+    --semantic-background-modal-primary: var(--primitive-base-white);
+    --semantic-background-modal-secondary: var(--primitive-gray-5);
+ /* Borders */
+    --semantic-border-blue-primary: var(--primitive-blue-50);
+    --semantic-border-blue-secondary: var(--primitive-blue-30);
+    --semantic-border-green-primary: var(--primitive-green-50);
+    --semantic-border-green-secondary: var(--primitive-green-30);
+    --semantic-border-neutral-primary: var(--primitive-gray-10);
+    --semantic-border-neutral-solid: var(--primitive-base-black);
+    --semantic-border-neutral-strong: var(--primitive-gray-20);
+    --semantic-border-orange-primary: var(--primitive-orange-50);
+    --semantic-border-orange-secondary: var(--primitive-orange-30);
+    --semantic-border-purple-primary: var(--primitive-purple-50);
+    --semantic-border-purple-secondary: var(--primitive-purple-30);
+    --semantic-border-red-primary: var(--primitive-red-50);
+    --semantic-border-red-secondary: var(--primitive-red-30);
+    --semantic-border-yellow-primary: var(--primitive-yellow-50);
+    --semantic-border-yellow-secondary: var(--primitive-yellow-30);
+  /* Text */   
+    --semantic-text-blue-primary: var(--primitive-blue-50);
+    --semantic-text-blue-secondary: var(--primitive-blue-70);
+    --semantic-text-green-primary: var(--primitive-green-50);
+    --semantic-text-green-secondary: var(--primitive-green-70);
+    --semantic-text-neutral-primary-inverse: var(--primitive-base-white);
+    --semantic-text-neutral-primary: var(--primitive-base-black);
+    --semantic-text-neutral-quaternary: var(--primitive-gray-40);
+    --semantic-text-neutral-secondary: var(--primitive-gray-90);
+    --semantic-text-neutral-tertiary: var(--primitive-gray-70);
+    --semantic-text-neutral-quaternary: var(--primitive-gray-60);
+    --semantic-text-neutral-white-fixed: var(--primitive-base-white);
+    --semantic-text-orange-primary: var(--primitive-orange-50);
+    --semantic-text-orange-secondary: var(--primitive-orange-70);
+    --semantic-text-purple-primary: var(--primitive-purple-50);
+    --semantic-text-purple-secondary: var(--primitive-purple-80);
+    --semantic-text-red-primary: var(--primitive-red-50);
+    --semantic-text-red-secondary: var(--primitive-red-70);
+    --semantic-text-yellow-primary: var(--primitive-yellow-50);
+    --semantic-text-yellow-secondary: var(--primitive-yellow-70);
+  }
+  
+ /* Dark Mode Semantic Overrides */
+.dark-mode {
+ /* Backgrounds */
+    --semantic-background-neutral-primary-inverse: var(--primitive-base-white);
+    --semantic-background-neutral-primary: var(--primitive-base-black);
+    --semantic-background-neutral-quaternary: var(--primitive-gray-80);
+    --semantic-background-neutral-quinary: var(--primitive-gray-70);
+    --semantic-background-neutral-secondary: var(--primitive-gray-95);
+    --semantic-background-neutral-senary: var(--primitive-gray-60);
+    --semantic-background-neutral-septenary: var(--primitive-gray-50);
+    --semantic-background-neutral-tertiary: var(--primitive-gray-90);   
+    --semantic-background-blue-primary: var(--primitive-blue-50);
+    --semantic-background-blue-secondary: var(--primitive-blue-80);
+    --semantic-background-blue-strong: var(--primitive-blue-30);
+    --semantic-background-green-primary: var(--primitive-green-50);
+    --semantic-background-green-secondary: var(--primitive-green-80);
+    --semantic-background-green-strong: var(--primitive-green-70);
+    --semantic-background-orange-primary: var(--primitive-orange-50);
+    --semantic-background-orange-secondary: var(--primitive-orange-70);
+    --semantic-background-orange-strong: var(--primitive-orange-30);
+    --semantic-background-purple-primary: var(--primitive-purple-50);
+    --semantic-background-purple-secondary: var(--primitive-purple-80);
+    --semantic-background-purple-strong: var(--primitive-purple-30);
+    --semantic-background-red-primary: var(--primitive-red-50);
+    --semantic-background-red-secondary: var(--primitive-red-80);
+    --semantic-background-red-strong: var(--primitive-red-30);
+    --semantic-background-yellow-primary: var(--primitive-yellow-50);
+    --semantic-background-yellow-secondary: var(--primitive-yellow-70);
+    --semantic-background-yellow-strong: var(--primitive-yellow-20);
+    --semantic-background-modal-primary: var(--primitive-gray-95);
+    --semantic-background-modal-secondary: var(--primitive-base-black);
+   /* Borders */ 
+    --semantic-border-blue-primary: var(--primitive-blue-50);
+    --semantic-border-blue-secondary: var(--primitive-blue-70);
+    --semantic-border-green-primary: var(--primitive-green-50);
+    --semantic-border-green-secondary: var(--primitive-green-70);
+    --semantic-border-neutral-primary: var(--primitive-gray-90);
+    --semantic-border-neutral-solid: var(--primitive-base-white);
+    --semantic-border-neutral-strong: var(--primitive-gray-80);
+    --semantic-border-orange-primary: var(--primitive-orange-50);
+    --semantic-border-orange-secondary: var(--primitive-orange-60);
+    --semantic-border-purple-primary: var(--primitive-purple-50);
+    --semantic-border-purple-secondary: var(--primitive-purple-70);
+    --semantic-border-red-primary: var(--primitive-red-50);
+    --semantic-border-red-secondary: var(--primitive-red-70);
+    --semantic-border-yellow-primary: var(--primitive-yellow-50);
+    --semantic-border-yellow-secondary: var(--primitive-yellow-60);
+  /* Text */   
+    --semantic-text-blue-primary: var(--primitive-blue-30);
+    --semantic-text-blue-secondary: var(--primitive-blue-50);
+    --semantic-text-green-primary: var(--primitive-green-30);
+    --semantic-text-green-secondary: var(--primitive-green-50);
+    --semantic-text-neutral-primary-inverse: var(--primitive-base-black);
+    --semantic-text-neutral-primary: var(--primitive-base-white);
+    --semantic-text-neutral-quaternary: var(--primitive-gray-60);
+    --semantic-text-neutral-secondary: var(--primitive-gray-10);
+    --semantic-text-neutral-tertiary: var(--primitive-gray-30);
+    --semantic-text-neutral-white-fixed: var(--primitive-base-white);
+    --semantic-text-orange-primary: var(--primitive-orange-30);
+    --semantic-text-orange-secondary: var(--primitive-orange-50);
+    --semantic-text-purple-primary: var(--primitive-purple-30);
+    --semantic-text-purple-secondary: var(--primitive-purple-50);
+    --semantic-text-red-primary: var(--primitive-red-30);
+    --semantic-text-red-secondary: var(--primitive-red-50);
+    --semantic-text-yellow-primary: var(--primitive-yellow-30);
+    --semantic-text-yellow-secondary: var(--primitive-yellow-50);
+  }

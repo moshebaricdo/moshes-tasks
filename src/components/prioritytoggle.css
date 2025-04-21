@@ -1,0 +1,80 @@
+.priority-toggle {
+    display: inline-flex;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .toggle-item {
+    background-color: var(--semantic-background-neutral-primary);
+    color: var(--semantic-text-neutral-primary);
+    border: none;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.3rem;
+    transition: background-color 0.15s ease;
+  }
+
+  .toggle-item.low {
+    border: 2px solid var(--semantic-border-neutral-strong);
+  }
+
+  .toggle-item.high {
+    border: 2px solid var(--semantic-border-neutral-strong);
+  }
+
+  .toggle-item.high i {
+    color: var(--semantic-text-yellow-primary)
+  }
+  
+  .toggle-item.low i {
+    color: var(--semantic-text-blue-primary)
+  }
+
+  .toggle-item.low:hover {
+    background-color: var(--semantic-background-blue-secondary);
+    border: 2px solid var(--semantic-border-blue-secondary);
+  }
+
+  .toggle-item.high:hover {
+    background-color: var(--semantic-background-yellow-secondary);
+    border: 2px solid var(--semantic-border-yellow-secondary);
+  }
+  
+  .toggle-item.low:active {
+    background-color: var(--semantic-background-blue-secondary);
+    border: 2px solid var(--semantic-border-blue-primary);
+  }
+  
+  .toggle-item.high:active {
+    background-color: var(--semantic-background-yellow-secondary);
+    border: 2px solid var(--semantic-border-yellow-primary);
+  }
+
+  /* Selected state for low priority: blue */
+  .toggle-item.low.selected {
+    background-color: var(--semantic-background-blue-primary);
+    color: var(--semantic-text-neutral-white-fixed);
+    border: 0px;
+    margin-right:-2px;
+    z-index:998;
+  }
+  
+  /* Selected state for high priority: yellow */
+  .toggle-item.high.selected {
+    background-color: var(--semantic-background-yellow-primary);
+    color: var(--semantic-text-neutral-white-fixed);
+    border: 0px;
+    margin-left:-2px;
+    z-index:998;
+  }
+
+  .toggle-item.low.selected i,
+  .toggle-item.high.selected i {
+    color: var(--semantic-text-neutral-white-fixed);
+}

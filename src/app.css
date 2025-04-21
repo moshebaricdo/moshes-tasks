@@ -1,0 +1,12 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  /* Use the custom property to set the height to 100% of the real viewport */
+  height: calc(var(--vh, 1vh) * 92.5);
+  overflow: hidden; /* Prevent vertical scroll if needed */
+  display: flex;
+}

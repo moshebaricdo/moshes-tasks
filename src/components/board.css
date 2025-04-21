@@ -1,0 +1,10 @@
+.board {
+  flex: 1; /* fill remaining space beside the sidebar */
+  display: flex;
+  overflow-x: auto; /* scroll horizontally if needed */
+  background-color: var(--semantic-background-neutral-secondary); 
+  padding: 2rem 2rem 2rem 0rem; /* more generous padding */
+  gap: 1rem; /* space between columns */
+  height: 95%;
+  overflow: hidden;
+}

@@ -1,0 +1,11 @@
+/* src/index.css */
+
+@import './styles/primitives.css';
+@import './styles/semantics.css';
+@import './styles/typography.css';
+
+body {
+  background-color: var(--semantic-background-neutral-secondary);
+  color: var(--semantic-text-neutral-primary);
+}
+  
