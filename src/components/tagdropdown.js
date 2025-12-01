@@ -7,7 +7,7 @@ const TAG_OPTIONS = [
   { label: 'TapMoney', color: 'var(--semantic-background-blue-primary)' },
   { label: 'MyCare Clinic', color: 'var(--semantic-background-red-primary)' },
   { label: 'Personal', color: 'var(--semantic-background-green-primary)' },
-  { label: 'Trev', color: 'var(--semantic-background-orange-primary)' },
+  { label: 'EAV Wash Co.', color: 'var(--semantic-background-orange-primary)' },
   { label: 'Other', color: 'var(--semantic-background-yellow-primary)' },
 ];
 
