@@ -6,7 +6,7 @@ import './taskcard.css';
 function Tag({ label }) {
   const TAG_BACKGROUND_COLORS = {
     'MyCare Clinic': 'var(--semantic-background-red-secondary)',
-    'Trev': 'var(--semantic-background-orange-secondary)',
+    'EAV Wash Co.': 'var(--semantic-background-orange-secondary)',
     'Other': 'var(--semantic-background-yellow-secondary)',
     'Personal': 'var(--semantic-background-green-secondary)',
     'TapMoney': 'var(--semantic-background-blue-secondary)',
@@ -15,7 +15,7 @@ function Tag({ label }) {
 
   const TAG_TEXT_COLORS = {
     'MyCare Clinic': 'var(--semantic-text-red-primary)',
-    'Trev': 'var(--semantic-text-orange-primary)',
+    'EAV Wash Co.': 'var(--semantic-text-orange-primary)',
     'Other': 'var(--semantic-text-yellow-primary)',
     'Personal': 'var(--semantic-text-green-primary)',
     'TapMoney': 'var(--semantic-text-blue-primary)',
