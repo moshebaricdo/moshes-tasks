@@ -10,6 +10,12 @@
   color: var(--semantic-text-neutral-white-fixed);
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.1s ease;
+  overflow: hidden;
+}
+
+/* Remove padding only for image buttons to let image fill circle */
+.icon-button.with-image {
+  padding: 0;
 }
 
 /* Default icon color */
@@ -40,6 +46,11 @@
   color: var(--semantic-text-neutral-quaternary);
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.1s ease;   
+  overflow: hidden;
+}
+
+.icon-button.secondary.with-image {
+  padding: 0;
 }
 
 .icon-button.secondary i {
@@ -50,4 +61,13 @@
 .icon-button.secondary:hover {
   background-color: var(--semantic-background-neutral-senary);
   color: var(--semantic-text-neutral-white-fixed);
+}
+
+/* Image icon support */
+.icon-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }

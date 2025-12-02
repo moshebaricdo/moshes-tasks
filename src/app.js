@@ -70,6 +70,10 @@ function App() {
     setActiveItem("board");
   }
 
+  function handleTagBoardClick(tagLabel) {
+    setActiveItem(`tag:${tagLabel}`);
+  }
+
   function handleAddOrEditTask(task) {
     if (editingTask) {
       setTasks((prevTasks) =>
@@ -125,17 +129,24 @@ function App() {
         onBoardClick={handleBoardClick}
         onToggleTheme={handleToggleTheme}
         isDarkMode={isDarkMode}
+        onTagClick={handleTagBoardClick}
       />
 
-      {activeItem === "board" && (
-        <Board
-          tasks={tasks}
-          setTasks={setTasks}
-          onDeleteTask={handleDeleteTask}
-          onEditTask={handleEditTask}
-          onArchiveTask={handleArchiveTask}
-        />
-      )}
+      {(() => {
+        const isTagView = typeof activeItem === 'string' && activeItem.startsWith('tag:');
+        const displayTasks = isTagView
+          ? tasks.filter((t) => t.tag === activeItem.slice(4))
+          : tasks;
+        return (
+          <Board
+            tasks={displayTasks}
+            setTasks={setTasks}
+            onDeleteTask={handleDeleteTask}
+            onEditTask={handleEditTask}
+            onArchiveTask={handleArchiveTask}
+          />
+        );
+      })()}
 
       {isModalOpen && (
         <NewTaskModal

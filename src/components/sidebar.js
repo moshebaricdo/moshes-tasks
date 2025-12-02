@@ -3,6 +3,22 @@ import React from 'react';
 import IconButton from './IconButton';
 import './sidebar.css';
 import Tooltip from './tooltip';
+import { TAG_OPTIONS } from './tagdropdown';
+import codeOrgImg from '../../media/code-org.png';
+import tapMoneyImg from '../../media/tapmoney.png';
+import mycareClinicImg from '../../media/mycare-clinic.png';
+import personalImg from '../../media/personal.png';
+import eavWashImg from '../../media/eav-wash.png';
+import otherImg from '../../media/other.png';
+
+const TAG_IMAGES = {
+  'Code.org': codeOrgImg,
+  'TapMoney': tapMoneyImg,
+  'MyCare Clinic': mycareClinicImg,
+  'Personal': personalImg,
+  'EAV Wash Co.': eavWashImg,
+  'Other': otherImg,
+};
 
 function Sidebar({
   activeItem,
@@ -11,6 +27,7 @@ function Sidebar({
   onArchiveClick,
   isDarkMode,
   onToggleTheme,
+  onTagClick,
 }) {
   return (
     <div className="sidebar">
@@ -36,6 +53,21 @@ function Sidebar({
             onClick={onBoardClick}
           />
         </Tooltip>
+
+        <div className="sidebar-divider" />
+
+        {TAG_OPTIONS.map((opt) => (
+          <Tooltip key={opt.label} text={opt.label}>
+            <IconButton
+              icon="fa-solid fa-tag"
+              label={opt.label}
+              isActive={activeItem === `tag:${opt.label}`}
+              activeColor={opt.color}
+              imageSrc={TAG_IMAGES[opt.label]}
+              onClick={() => onTagClick && onTagClick(opt.label)}
+            />
+          </Tooltip>
+        ))}
       </div>
 
       <div className="sidebar-bottom">

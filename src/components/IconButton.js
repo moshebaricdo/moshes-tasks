@@ -6,6 +6,7 @@ import './iconbutton.css';
  * IconButton component for action buttons with icons
  * @param {Object} props
  * @param {string} props.icon - Font Awesome icon class
+ * @param {string} props.imageSrc - Optional image source to render instead of icon
  * @param {string} props.label - Button label
  * @param {boolean} props.isActive - Whether the button is active
  * @param {string} props.activeColor - Active background color
@@ -17,6 +18,7 @@ import './iconbutton.css';
  */
 function IconButton({ 
   icon, 
+  imageSrc,
   label, 
   isActive, 
   activeColor, 
@@ -31,12 +33,12 @@ function IconButton({
 
   const buttonContent = (
     <button
-      className={`icon-button ${variant} ${isActive ? 'active' : ''} ${className}`}
+      className={`icon-button ${variant} ${imageSrc ? 'with-image' : ''} ${isActive ? 'active' : ''} ${className}`}
       onClick={onClick}
       aria-label={ariaLabel || label}
       style={style}
     >
-      <i className={icon} />
+      {imageSrc ? <img src={imageSrc} alt={label} /> : <i className={icon} />}
     </button>
   );
 

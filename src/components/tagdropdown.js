@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './TagDropdown.css';
 
-const TAG_OPTIONS = [
+export const TAG_OPTIONS = [
   { label: 'Code.org', color: 'var(--semantic-background-purple-primary)' },
   { label: 'TapMoney', color: 'var(--semantic-background-blue-primary)' },
   { label: 'MyCare Clinic', color: 'var(--semantic-background-red-primary)' },
